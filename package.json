@@ -1,0 +1,19 @@
+{
+  "name": "playwright-frontend-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --project=firefox",
+    "codegen": "npx playwright codegen localhost:8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@depay/web3-mock": "^13.22.11",
+    "@playwright/test": "^1.28.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1"
+  }
+}
