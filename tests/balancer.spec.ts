@@ -54,6 +54,9 @@ test('test wallet connection', async ({ page, context }) => {
   const tokenOut = await page.locator('input[name="tokenOut"]');
 
   // page.getByText('High price impact');
-  await page.getByRole('button', { name: 'Preview' }).click();
-  expect(page.getByText('Preview swap')).toBeDefined();
+
+  // It takes a long time to load preview button
+  await page.getByRole('button', { name: 'Preview' }).click({ timeout: 15000 });
+
+  await expect(page.getByText('Preview swap')).toBeVisible();
 });
